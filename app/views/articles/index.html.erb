@@ -1,12 +1,14 @@
-<h1>Hello, Rails!</h1>
-<h2>Welcome to Julian's Blog</h2>
-<ul>
-    <% @articles.each do |article|%>
-    <li>
-        <a href="/articles/<%= article.id %>">
-        <%= link_to article.title, article  %>
-        <a>
-    </li>
-    <%end%>
-</ul>
-<%= link_to "New Article", new_article_path %>
+<div class="bg-secondary container-fluid d-flex flex-column">
+    <h1>Hello, Rails!</h1>
+    <h2>Welcome to Julian's Blog</h2>
+    <ul>
+        <% @articles.each do |article|%>
+        <li>
+            <a href="/articles/<%= article.id %>">
+            <%= link_to article.title, article, :class => "btn-light p-2"%>
+            <a>
+        </li>
+        <%end%>
+    </ul>
+    <%= link_to "New Article", new_article_path, :class => "btn-dark p-2 w-25" %>
+</div>
